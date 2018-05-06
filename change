@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    window.onload = function (){
+        var oBtn1 = document.getElementById('qie');
+        var oBtn2 = document.getElementById('sum');
+        var oP    = document.getElementById('p1');
+        var oBtn3 = document.getElementById('btn1');
+        var oBtn4 = document.getElementById('btn2');
+        var num   = 16;
+
+        oBtn1.onclick = function (){
+            if(num>12){
+            num--;
+            oP.style.fontSize = num + 'px';
+            };
+        };
+        oBtn2.onclick = function (){
+            if(num<22){
+            num++;
+            oP.style.fontSize = num + 'px';
+            };
+        };
+        oBtn3.onclick = function (){
+            oP.className = 'red';
+        };
+        oBtn4.onclick = function (){
+            oP.className = 'yellow';
+        }
+
+    };
+    
+    </script>
+    <style>
+    .red{color: brown;
+         width: 300px;
+         background: aqua;
+         padding: 20px;
+         border: 9 solid blue;
+             }
+     .yellow{
+        color: #f4f;
+         width: 300px;
+         background:#443;
+         padding: 20px;
+         border: 9 solid rgb(87, 5, 29);
+     }        
+    </style>
+</head>
+<body>
+    <input id="qie" type="button" value="-">
+    <input id="sum" type="button" value="+">
+    <input id="btn1" type="button" value="红">
+    <input id="btn2" type="button" value="绿">
+
+    <br>
+    <p id="p1" >按检方说法，朴槿惠在这期间参与组织了多达约120项民意调查，地点主要是首尔南部的江南地区和大邱市。
+       这两个地点均被视为保守派的“大本营”。朴槿惠政府意在通过民调筛选出“亲朴派”人物，推选这些人参选议员，
+       以期进一步巩固朴槿惠的权力。（编译/海外网 刘强）</p>
+</body>
+</html>
